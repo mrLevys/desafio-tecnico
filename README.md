@@ -1,5 +1,5 @@
 # 🚌 DESAFIO TÉCNICO
-## Desenvolvedor Júnior Full Stack
+## Desenvolvedor Full Stack
 **.NET • ReactJS • Docker • Testes**
 
 # Projeto: OniBus Express
