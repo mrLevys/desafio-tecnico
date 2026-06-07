@@ -11,5 +11,18 @@ export const tripsService = {
     const response = await api.get(`/trips/${id}`);
 
     return response.data;
-  }
+  },
+
+  search: async (params: {
+    origin: string;
+    destination: string;
+    date: string;
+  }) => {
+    const { data } = await api.get("/trips", {
+      params,
+    });
+
+    return data;
+  },
+
 };
