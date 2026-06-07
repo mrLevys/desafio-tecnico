@@ -1,0 +1,24 @@
+{
+  "routes": [
+    {
+      "id": 1,
+      "origin": "São Paulo",
+      "destination": "Rio de Janeiro",
+      "duration": "6h"
+    }
+  ],
+
+  "trips": [
+    {
+      "id": 1,
+      "routeId": 1,
+      "departureDate": "2026-06-15",
+      "departureTime": "08:00",
+      "price": 120,
+      "availableSeats": 40,
+      "occupiedSeats": [1, 2, 3, 4, 5]
+    }
+  ],
+
+  "reservations": []
+}
