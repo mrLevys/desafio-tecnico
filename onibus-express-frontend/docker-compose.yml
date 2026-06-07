@@ -1,0 +1,19 @@
+services:
+
+  frontend:
+    build: .
+    ports:
+      - "3000:80"
+
+  mock-api:
+    image: node:22-alpine
+
+    working_dir: /app
+
+    volumes:
+      - ./:/app
+
+    command: sh -c "npm install && npm run mock-api"
+
+    ports:
+      - "3001:3001"
