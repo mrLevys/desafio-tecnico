@@ -28,11 +28,22 @@ export function PassengerPage() {
 
       setPassenger(passenger);
 
+      const code =
+        Math.random()
+          .toString(36)
+          .substring(2, 5)
+          .toUpperCase() +
+        "-" +
+        Math.floor(
+          Math.random() * 100000
+        );
+
       const reservation =
         await reservationsService.create({
+          code,
           tripId: selectedTrip.id,
-          seatNumber:
-            selectedSeat,
+          seatNumber: selectedSeat,
+          status: "CONFIRMED",
           passenger,
         });
 
