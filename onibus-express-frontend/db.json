@@ -5,6 +5,12 @@
       "origin": "São Paulo",
       "destination": "Rio de Janeiro",
       "duration": "6h"
+    },
+    {
+      "id": 2,
+      "origin": "São Paulo",
+      "destination": "Curitiba",
+      "duration": "5h"
     }
   ],
 
@@ -12,11 +18,46 @@
     {
       "id": 1,
       "routeId": 1,
-      "departureDate": "2026-06-15",
+      "origin": "São Paulo",
+      "destination": "Rio de Janeiro",
+      "departureDate": "2026-06-08",
       "departureTime": "08:00",
       "price": 120,
       "availableSeats": 40,
       "occupiedSeats": [1, 2, 3, 4, 5]
+    },
+    {
+      "id": 2,
+      "routeId": 1,
+      "origin": "Rio de Janeiro",
+      "destination": "São Paulo",
+      "departureDate": "2026-06-09",
+      "departureTime": "14:00",
+      "price": 150,
+      "availableSeats": 40,
+      "occupiedSeats": [10, 11, 12]
+    },
+    {
+      "id": 3,
+      "routeId": 2,
+      "origin": "São Paulo",
+      "destination": "Curitiba",
+      "departureDate": "2026-06-10",
+      "departureTime": "09:00",
+      "price": 110,
+      "availableSeats": 40,
+      "occupiedSeats": [5, 6, 7, 9]
+    },
+    {
+      "id": 4,
+      "routeId": 1,
+      "origin": "Curitiba",
+      "destination": "São Paulo",
+      "departureDate": "2026-06-11",
+      "departureTime": "14:00",
+      "price": 150,
+      "availableSeats": 40,
+      "occupiedSeats": [10, 11, 12, 15]
     }
   ],
 

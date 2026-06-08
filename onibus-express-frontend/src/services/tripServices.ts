@@ -18,9 +18,16 @@ export const tripsService = {
     destination: string;
     date: string;
   }) => {
-    const { data } = await api.get("/trips", {
-      params,
-    });
+    const { data } = await api.get(
+      "/trips",
+      {
+        params: {
+          origin: params.origin,
+          destination: params.destination,
+          departureDate: params.date,
+        },
+      }
+    );
 
     return data;
   },

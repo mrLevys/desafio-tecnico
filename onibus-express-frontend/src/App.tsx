@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { SearchPage } from "./pages/SearchPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={<SearchPage />} />
         <Route path="/assentos" />
         <Route path="/passageiro" />
         <Route path="/sucesso" />
