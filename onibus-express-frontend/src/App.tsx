@@ -1,47 +1,59 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
+
+import { MainLayout } from "./layouts/MainLayout";
+
 import { SearchPage } from "./pages/SearchPage";
-import { PassengerPage } from "./pages/PassengerPage";
-import { ReservationLookupPage } from "./pages/ReservationLookupPage";
 import { SeatSelectionPage } from "./pages/SeatSelectionPage";
+import { PassengerPage } from "./pages/PassengerPage";
 import { SuccessPage } from "./pages/SuccessPage";
+import { ReservationLookupPage } from "./pages/ReservationLookupPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
+    <Routes>
+      <Route element={<MainLayout />}>
         <Route
-        path="/"
-        element={<SearchPage />}
-      />
+          path="/"
+          element={<SearchPage />}
+        />
 
-      <Route
-        path="/assentos"
-        element={
-          <SeatSelectionPage />
-        }
-      />
+        <Route
+          path="/assentos"
+          element={
+            <SeatSelectionPage />
+          }
+        />
 
-      <Route
-        path="/passageiro"
-        element={
-          <PassengerPage />
-        }
-      />
+        <Route
+          path="/passageiro"
+          element={
+            <PassengerPage />
+          }
+        />
 
-      <Route
-        path="/sucesso"
-        element={<SuccessPage />}
-      />
+        <Route
+          path="/sucesso"
+          element={<SuccessPage />}
+        />
 
-      <Route
-        path="/reserva"
-        element={
-          <ReservationLookupPage />
-        }
-      />
-      </Routes>
-    </BrowserRouter>
-  )
+        <Route
+          path="/reserva"
+          element={
+            <ReservationLookupPage />
+          }
+        />
+        
+        <Route
+          path="*"
+          element={<NotFoundPage />}
+        />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;
